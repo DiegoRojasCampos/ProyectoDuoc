@@ -13,6 +13,7 @@
         <ion-item><a href="/registro">Registro Asistencia</a></ion-item>
         <ion-item><a href="/clave">Cambiar Clave</a></ion-item>
       </ion-list>
+      <h6><ion-icon name="log-in"></ion-icon> Cerrar Sesión</h6>
     </ion-content>
   </ion-menu>
   <div class="ion-page" id="main-content">
@@ -25,13 +26,13 @@
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
-      <h1 class="ion-text-center">Bienvenidos a la página principal</h1>
+      <h1 class="ion-text-center">Bienvenido {{ user }}</h1>
     </ion-content>
   </div>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
-    <ion-title>Footer</ion-title>
+    <ion-title class="ion-text-center">&copy; Copyright 2024</ion-title>
   </ion-toolbar>
 </ion-footer>

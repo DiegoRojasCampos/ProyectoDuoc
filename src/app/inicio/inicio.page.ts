@@ -38,6 +38,17 @@ export class InicioPage implements OnInit {
     }
   }
 
+  async enviar_correo(){
+    const mensaje = await this.toastController.create({
+      message: "Se ha enviado un correo para recuperar la contraseña!",
+      duration: 5000,
+      position: "top",
+      color: "success"
+    });
+    await mensaje.present();
+    return;
+  }
+
   ngOnInit() {
   }
 

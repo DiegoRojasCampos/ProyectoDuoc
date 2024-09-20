@@ -13,6 +13,7 @@
         <ion-item><a href="/registro">Registro Asistencia</a></ion-item>
         <ion-item><a href="/clave">Cambiar Clave</a></ion-item>
       </ion-list>
+      <h6><ion-icon name="log-in"></ion-icon> Cerrar Sesión</h6>
     </ion-content>
   </ion-menu>
   <div class="ion-page" id="main-content">
@@ -30,6 +31,7 @@
         <ion-input type="text" placeholder="Usuario" labelPlacement="fixes" [(ngModel)]="user"></ion-input>
         <ion-input type="password" placeholder="Contraseña" labelPlacement="fixes" [(ngModel)]="password"></ion-input>
         <ion-button expand="block" (click)="iniciar_sesion()">Iniciar Sesión</ion-button>
+        <h6 class="ion-text-center"><a (click)="enviar_correo()">Recuperar Contraseña</a></h6>
         <h6 class="ion-text-center"><a href="/clave">Cambiar Contraseña</a></h6>
       </div>
     </ion-content>
@@ -38,7 +40,7 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-title>Footer</ion-title>
+    <ion-title class="ion-text-center">&copy; Copyright 2024</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
