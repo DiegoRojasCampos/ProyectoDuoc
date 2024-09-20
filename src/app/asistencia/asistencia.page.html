@@ -1,0 +1,84 @@
+<ion-content [fullscreen]="true">
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+        <ion-item><a href="/inicio">Iniciar Sesión</a></ion-item>
+        <ion-item><a href="/asignaturas">Mis Asignaturas</a></ion-item>
+        <ion-item><a href="/asistencia">Mis Asistencias</a></ion-item>
+        <ion-item><a href="/registro">Registro Asistencia</a></ion-item>
+        <ion-item><a href="/clave">Cambiar Clave</a></ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <h1 class="ion-text-center">Mis Asistencias</h1>
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Arquitectura</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-list>
+              <ion-item *ngFor="let asistencia of asistencias">
+                <ion-label>{{ asistencia.dia }}</ion-label>
+                <ion-label>{{ asistencia.fecha }}</ion-label>
+                <ion-label>{{ asistencia.estado }}</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light">
+            <ion-label>Programación</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-list>
+              <ion-item *ngFor="let asistencia of asistencias">
+                <ion-label>{{ asistencia.dia }}</ion-label>
+                <ion-label>{{ asistencia.fecha }}</ion-label>
+                <ion-label>{{ asistencia.estado }}</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light">
+            <ion-label>Calidad de software</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-list>
+              <ion-item *ngFor="let asistencia of asistencias">
+                <ion-label>{{ asistencia.dia }}</ion-label>
+                <ion-label>{{ asistencia.fecha }}</ion-label>
+                <ion-label>{{ asistencia.estado }}</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </ion-content>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

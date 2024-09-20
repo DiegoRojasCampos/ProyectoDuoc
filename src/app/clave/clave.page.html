@@ -25,13 +25,10 @@
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
-      <h1 class="ion-text-center">Inicio de Sesión</h1>
-      <div>
-        <ion-input type="text" placeholder="Usuario" labelPlacement="fixes" [(ngModel)]="user"></ion-input>
-        <ion-input type="password" placeholder="Contraseña" labelPlacement="fixes" [(ngModel)]="password"></ion-input>
-        <ion-button expand="block" (click)="iniciar_sesion()">Iniciar Sesión</ion-button>
-        <h6 class="ion-text-center"><a href="/clave">Cambiar Contraseña</a></h6>
-      </div>
+      <h1 class="ion-text-center">Cambiar Contraseña</h1>
+      <ion-input type="password" placeholder="Nueva Contraseña" labelPlacement="fixes" [(ngModel)]="password1"></ion-input>
+      <ion-input type="password" placeholder="Repetir Contraseña" labelPlacement="fixes" [(ngModel)]="password2"></ion-input>
+      <ion-button expand="block" (click)="cambiar_contrasenia()">Cambiar</ion-button>
     </ion-content>
   </div>
 </ion-content>

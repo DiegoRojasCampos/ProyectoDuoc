@@ -25,13 +25,14 @@
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
-      <h1 class="ion-text-center">Inicio de Sesión</h1>
-      <div>
-        <ion-input type="text" placeholder="Usuario" labelPlacement="fixes" [(ngModel)]="user"></ion-input>
-        <ion-input type="password" placeholder="Contraseña" labelPlacement="fixes" [(ngModel)]="password"></ion-input>
-        <ion-button expand="block" (click)="iniciar_sesion()">Iniciar Sesión</ion-button>
-        <h6 class="ion-text-center"><a href="/clave">Cambiar Contraseña</a></h6>
-      </div>
+      <h1 class="ion-text-center">Mis Asignaturas</h1>
+      <h6>Estudiante: Usuario1</h6>
+      <ion-list>
+        <ion-item *ngFor="let asignatura of asignaturas">
+          <ion-label>{{ asignatura.seccion }}</ion-label>
+          <ion-label>{{ asignatura.asignatura }}</ion-label>
+        </ion-item>
+      </ion-list>
     </ion-content>
   </div>
 </ion-content>

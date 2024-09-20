@@ -2,24 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.page.html',
-  styleUrls: ['./inicio.page.scss'],
+  selector: 'app-clave',
+  templateUrl: './clave.page.html',
+  styleUrls: ['./clave.page.scss'],
 })
-export class InicioPage implements OnInit {
+export class ClavePage implements OnInit {
 
-  user : string;
-  password : string;
+  password1: string;
+  password2: string;
 
   constructor(private toastController: ToastController) {
-    this.user = "" // Usuario1
-    this.password = "" // MiClav3
+    this.password1 = "";
+    this.password2 = "";
   }
 
-  async iniciar_sesion(){
-    if (this.user == "Usuario1" && this.password == "MiClav3"){
+  async cambiar_contrasenia(){
+    if(this.password1 == this.password2 && this.password2 == this.password1){
       const mensaje = await this.toastController.create({
-        message: "Inicio de sesión exitoso!",
+        message: "Contraseña actualizada con éxito!",
         duration: 5000,
         position: "top",
         color: "success"
@@ -28,7 +28,7 @@ export class InicioPage implements OnInit {
       return;
     }else{
       const mensaje = await this.toastController.create({
-        message: "Usuario y contraseña inválidos!",
+        message: "Constraseñas no coinciden!",
         duration: 5000,
         position: "top",
         color: "danger"
