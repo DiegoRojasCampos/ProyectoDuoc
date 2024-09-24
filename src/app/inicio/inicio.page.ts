@@ -20,16 +20,25 @@ export class InicioPage implements OnInit {
     if (this.user == "Usuario1" && this.password == "MiClav3"){
       const mensaje = await this.toastController.create({
         message: "Inicio de sesión exitoso!",
-        duration: 5000,
+        duration: 3500,
         position: "top",
         color: "success"
+      });
+      await mensaje.present();
+      return;
+    }else if(this.user == "" && this.password == ""){
+      const mensaje = await this.toastController.create({
+        message: "Debe llenar todos los campos!",
+        duration: 3500,
+        position: "top",
+        color: "danger"
       });
       await mensaje.present();
       return;
     }else{
       const mensaje = await this.toastController.create({
         message: "Usuario y contraseña inválidos!",
-        duration: 5000,
+        duration: 3500,
         position: "top",
         color: "danger"
       });
@@ -41,7 +50,7 @@ export class InicioPage implements OnInit {
   async enviar_correo(){
     const mensaje = await this.toastController.create({
       message: "Se ha enviado un correo para recuperar la contraseña!",
-      duration: 5000,
+      duration: 3500,
       position: "top",
       color: "success"
     });
