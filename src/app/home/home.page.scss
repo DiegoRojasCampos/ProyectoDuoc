@@ -25,3 +25,24 @@
 #container a {
   text-decoration: none;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgba(255, 255, 18, 0.786);
+}
+
+.color-registr {
+  color:white;
+}
+.color-app {
+  color: rgb(255, 255, 18);
+}
+
+.custom-toolbar {
+  --background: rgb(31, 31, 210);
+}

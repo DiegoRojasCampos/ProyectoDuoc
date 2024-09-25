@@ -1,0 +1,21 @@
+.color-registr {
+    color:white;
+}
+.color-app {
+    color: rgb(255, 255, 18);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgba(255, 255, 18, 0.786);
+}
+
+.custom-toolbar {
+    --background: rgb(31, 31, 210);
+  }
+  

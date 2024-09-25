@@ -13,16 +13,16 @@
         <ion-item><a href="/registro">Registro Asistencia</a></ion-item>
         <ion-item><a href="/clave">Cambiar Clave</a></ion-item>
       </ion-list>
-      <h6><ion-icon name="log-in"></ion-icon> Cerrar Sesión</h6>
+      <h6><ion-icon name="log-in"></ion-icon><a href="/inicio" style="text-decoration: none;">Cerrar Sesión</a></h6>
     </ion-content>
   </ion-menu>
   <div class="ion-page" id="main-content">
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar class="custom-toolbar">
         <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>RegistraAPP</ion-title>
+        <ion-title><span class="color-registr">Registr</span> <span class="color-app">APP</span></ion-title>
         <ion-buttons slot="end">
           <ion-back-button defaultHref="home"></ion-back-button>
         </ion-buttons>
@@ -31,15 +31,9 @@
     <ion-content class="ion-padding">
       <h1 class="ion-text-center">Registro de Asistencia</h1>
       <ion-card>
-        <img src="/assets/img/qr.jpg" />
-        <!-- <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content> -->
+        <div class="ion-text-center">
+          <img class="card-image" src="/assets/img/qr.jpg"/>
+        </div>
       </ion-card>
     </ion-content>
   </div>
